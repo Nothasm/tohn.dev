@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tohn Matos | Software Developer</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #00BFFF;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .logo-img {
+      width: 140px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .logo-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 700;
+      color: #00BFFF;
+    }
+    .logo-subtitle {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-top: 5px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #00BFFF;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #333;
+      border-bottom: 2px solid #00BFFF;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+    section p, section ul li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+    footer p {
+      font-size: 1rem;
+    }
+    a {
+      color: #00BFFF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #00BFFF;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    form button:hover {
+      background-color: #0099cc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="language-toggle" onclick="toggleLanguage()">PT</button>
+    <img src="logo.png" alt="Tohn Matos Logo" class="logo-img" />
+    <h1 class="logo-title">Tohn Matos</h1>
+    <p class="logo-subtitle" data-translate="subtitle">Software Developer</p>
+    <nav>
+      <ul>
+        <li><a href="#about" data-translate="navAbout">About</a></li>
+        <li><a href="#contact" data-translate="navContact">Contact</a></li>
+        <li><a href="https://www.linkedin.com/in/tohn-matos" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/Nothasm" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2 data-translate="aboutTitle">About Me</h2>
+    <p data-translate="aboutP1">I’m a backend developer passionate about creating efficient, scalable, and clean solutions. Over the years, I've worked with various teams using agile methodologies and focused on performance and high-quality code.</p>
+    <p data-translate="aboutP2">Currently working at Mindera, building cloud-based solutions using AWS, Node.js, TypeScript, and CDK (Infrastructure as Code).</p>
+  </section>
+
+  <section id="contact">
+    <h2 data-translate="contactTitle">Contact</h2>
+    <form action="mailto:eu@tohn.dev" method="post" enctype="text/plain">
+      <input type="text" name="name" data-translate-placeholder="namePlaceholder" placeholder="Your Name" required />
+      <input type="email" name="email" data-translate-placeholder="emailPlaceholder" placeholder="Your Email" required />
+      <textarea name="message" rows="6" data-translate-placeholder="messagePlaceholder" placeholder="Your Message" required></textarea>
+      <button type="submit" data-translate="sendBtn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tohn Matos</p>
+  </footer>
+
+  <script>
+    const translations = {
+      pt: {
+        subtitle: "Desenvolvedor de Software",
+        navAbout: "Sobre",
+        navContact: "Contato",
+        aboutTitle: "Sobre Mim",
+        aboutP1: "Sou um desenvolvedor backend apaixonado por criar soluções eficientes, escaláveis e limpas. Ao longo dos anos, trabalhei com várias equipes utilizando metodologias ágeis, com foco em performance e código de alta qualidade.",
+        aboutP2: "Atualmente trabalho na Mindera, criando soluções em nuvem com AWS, Node.js, TypeScript e CDK (infraestrutura como código).",
+        contactTitle: "Contato",
+        sendBtn: "Enviar Mensagem",
+        namePlaceholder: "Seu Nome",
+        emailPlaceholder: "Seu Email",
+        messagePlaceholder: "Sua Mensagem"
+      },
+      en: {
+        subtitle: "Software Developer",
+        navAbout: "About",
+        navContact: "Contact",
+        aboutTitle: "About Me",
+        aboutP1: "I’m a backend developer passionate about creating efficient, scalable, and clean solutions. Over the years, I've worked with various teams using agile methodologies and focused on performance and high-quality code.",
+        aboutP2: "Currently working at Mindera, building cloud-based solutions using AWS, Node.js, TypeScript, and CDK (Infrastructure as Code).",
+        contactTitle: "Contact",
+        sendBtn: "Send Message",
+        namePlaceholder: "Your Name",
+        emailPlaceholder: "Your Email",
+        messagePlaceholder: "Your Message"
+      }
+    };
+
+    let currentLang = "en";
+
+    function toggleLanguage() {
+      currentLang = currentLang === "en" ? "pt" : "en";
+      document.querySelector(".language-toggle").innerText = currentLang === "en" ? "PT" : "EN";
+
+      document.querySelectorAll("[data-translate]").forEach(el => {
+        const key = el.getAttribute("data-translate");
+        el.innerText = translations[currentLang][key];
+      });
+
+      document.querySelectorAll("[data-translate-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-translate-placeholder");
+        el.placeholder = translations[currentLang][key];
+      });
+    }
+  </script>
+</body>
+</html>
